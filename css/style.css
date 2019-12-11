@@ -1,0 +1,229 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: lucida sans;
+	--orange : #eb5424;
+}
+.container{
+	width: 85%;
+	margin: auto;
+	display: flex;
+}
+
+
+.Navbar{
+	padding: 20px 0 ;
+	background-color: white;
+	overflow: hidden;
+
+	
+}
+
+.Navbar .logo h2{
+font-size: 30px;
+font-weight: bold;
+}
+
+.logo  {
+	flex:1;
+}
+
+.links{
+
+flex:1;
+
+}
+.links ul{
+	display: flex;
+
+}
+.links ul li{
+	list-style: none;
+	flex :1;
+
+}
+
+.links ul li a{
+text-decoration: none;
+color: black;
+padding: 10px 20px;
+font-weight: bold;
+}
+
+.links ul li a:hover{
+
+color: var(--orange) ;
+
+}
+.home{
+	background: url('../images/home-bg.jpg') no-repeat; 
+	background-size: cover;
+	height: 500px;
+	background-position: center center;
+	display: flex;
+
+}
+.home .container{
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.home h2{
+font-size: 60px;
+font-weight: bold;
+color: #5e5e5e;
+margin-bottom: 10px;
+}
+.home h4{
+font-size: 35px;
+color: var(--orange) ;
+margin-bottom: 10px;
+
+}
+.home p {
+	font-size: 20px;
+	line-height: 1.5;
+	width: 500px;
+	text-align: center;
+	color: #888;
+	margin-bottom: 10px;
+}
+.home button{
+	background-color: var(--orange);
+	font-size: 18px;
+	color: white;
+	width: 150px;
+	border: none;
+	padding: 15px;
+	cursor: pointer;
+	font-weight: bold;
+}
+.home button:hover{
+	background-color: white;
+	color:var(--orange) ;
+
+}
+
+.work{
+	background-color: white;
+	height: auto;
+	padding: 50px 0 ;
+
+
+
+
+}
+.work .container{
+
+	flex-direction: column;
+}
+.headd{
+	display: flex;
+}
+.work  h2{
+	font-size: 60px;
+	width: 100%;
+
+
+}
+.work h2 span{
+	font-weight: normal;
+}
+.headd .part{
+	width: 30%;
+	margin-top: 20px;
+	height: auto;
+	padding: 70px;
+	border: 2px solid #888;
+	text-align: center;
+	margin-left: 5%;
+	flex:1;
+
+}
+
+i{
+	color: #888;
+	margin-bottom: 20px;
+}
+.part h4{
+	color: var(--orange);
+	font-size: 25px;
+	margin-bottom: 20px;
+}
+.part hr{
+	width: 80%;
+	margin: auto;
+	margin-bottom: 20px;
+}
+.part p {
+	color: #888;
+	font-size: 15px;
+}
+.headd div:first-child{
+	margin-left: 0;
+}
+@media (max-width: 480px){
+.headd{
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+.headd .part {
+	width: 100%;
+}
+.headd  div:nth-child(2){
+		margin-left: 0;
+
+}
+
+
+}
+@media (max-width: 767px){
+.Navbar .container{
+		display: block; /*to remove flex*/
+	}
+.logo  {
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+
+}
+.links ul{
+width: 100%;
+   flex-direction: column;
+   text-align: center;
+
+}
+
+.links ul li {
+	
+	margin-bottom: 20px;
+}
+.home h2{
+	font-size: 40px;
+}
+.home h4{
+	font-size: 25px;
+}
+.home p {
+		font-size: 15px;
+
+}
+
+.headd{
+	flex-direction: row;
+	flex-wrap: wrap;
+
+}
+.headd .part {
+	width: 50%;
+}
+.headd div:last-child{
+	margin-left: 0;
+}
+
+}
