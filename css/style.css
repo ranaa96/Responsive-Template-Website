@@ -145,7 +145,7 @@ margin-bottom: 10px;
 
 }
 
-i{
+.part i{
 	color: #888;
 	margin-bottom: 20px;
 }
@@ -166,23 +166,10 @@ i{
 .headd div:first-child{
 	margin-left: 0;
 }
-@media (max-width: 480px){
-.headd{
-	flex-direction: row;
-	flex-wrap: wrap;
-
-}
-.headd .part {
-	width: 100%;
-}
-.headd  div:nth-child(2){
-		margin-left: 0;
-
-}
 
 
-}
-@media (max-width: 767px){
+
+@media (max-width: 767px)  {
 .Navbar .container{
 		display: block; /*to remove flex*/
 	}
@@ -220,10 +207,441 @@ width: 100%;
 
 }
 .headd .part {
+	width: 100%;
+
+
+}
+.headd  div:last-child{
+		margin-left: 0;
+
+
+}
+
+
+}
+
+@media (max-width: 600px){
+.headd{
+	flex-direction: column;
+
+}
+.headd .part {
+	width: 70%;
+
+
+}
+.headd  div:nth-of-type(2){
+		margin-left: 0;
+
+
+}
+
+
+}
+
+.port{
+	background-color: #f8f8f8;
+	height:auto;
+	padding-top: 20px;
+	
+
+}
+
+
+.port li {
+	list-style: none;
+	padding:20px;
+	display: inline-block;
+
+}
+
+.port h2 span{
+	font-weight: normal;
+}
+.port h2 {
+font-size: 35px;
+text-align: center;
+}
+
+ .port .active{
+	background-color: var(--orange);
+	color: white;
+
+}
+
+.port ul {
+	margin: 10px 0 ;
+	text-align: center;
+}
+.gallery {
+	display: flex;
+font-size: 0; /*to remove spaces */
+}
+.gallery div{
+	width: 25%;
+		position: relative;
+
+}
+.gallery div img{
+	width:100%;
+	
+}
+
+
+.gallery div .overlay{
+	font-size: 15px;
+	position: absolute;
+	/*TO Take 100% of width*/
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color:rgba(234,84,36,0.5);
+	opacity: 0;
+	
+}
+
+
+.gallery div p span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	display: block; /*to change width & height*/
+	background-color: white;
+	padding: 15px 10px;
+	border: 1px solid var(--orange);
+	cursor: pointer;
+	
+}
+.port .gallery div:hover .overlay{
+	opacity: 1;
+}
+
+/*0 to 575*/
+@media (max-width: 575px)  {
+	.port li {
+		display: block;
+	}
+.gallery {
+flex-wrap: wrap;
+}
+.gallery div{
+	width: 100%;
+}
+
+}
+
+@media (min-width:576px ) and (max-width: 767px)  {
+.gallery {
+flex-wrap: wrap;
+}
+.gallery div{
 	width: 50%;
 }
-.headd div:last-child{
-	margin-left: 0;
+
 }
+
+
+.profile{
+	height: auto;
+	overflow: hidden;
+	display: flex;
+	padding: 50px 0 ;
+}
+.right{
+	width: 50%;
+}
+.left{
+	width: 50%;
+}
+
+.right h2 , .left h2 {
+	font-size: 40px;
+	margin-bottom: 20px;
+}
+
+
+.right h2 span , .left h2 span{
+	font-weight: normal;
+}
+
+ .left ul li span:first-of-type{
+	font-weight: bolder;
+	width: 100px;
+	display: inline-block;
+}
+
+
+ .left ul li {
+	margin-bottom: 10px;
+
+}
+
+ul{
+	list-style: none;
+}
+
+span.web {
+	color: var(--orange);
+}
+
+
+.right p {
+	font-size: 15px;
+	color: #888;
+	line-height: 1.5;
+	margin-bottom: 20px;
+}
+
+.bar{
+	margin-bottom: 10px;
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	height:50px;
+
+}
+.bar span {
+	width: 50%;
+}
+.bar span:nth-of-type(2) {
+	text-align: center;
+	display: block;
+}
+/*.parent{
+	display: flex;
+}*/
+.bar .parent{
+	/*flex-direction: column;*/
+	height: 2px;
+	background-color: #f8f8f8;
+	width: 100%;
+	display: inline-flex;
+}
+.right .bar:nth-of-type(1) .parent span{
+	display: block;
+	width: 100%;
+	background-color: var(--orange);
+}
+.right .bar:nth-of-type(2) .parent span{
+	display: block;
+	width: 90%;
+	background-color: var(--orange);
+}
+.right .bar:nth-of-type(3) .parent span{
+	display: block;
+	width: 80%;
+	background-color: var(--orange);
+}
+@media (max-width: 575px){
+	.container{
+		flex-wrap: nowrap;
+		flex-direction: column;
+	}
+	.left,.right{
+		width: 100%;
+	}
+
+
+}
+
+.creative{
+	background: url('../images/about-bg.jpg') no-repeat; 
+	background-size: cover;
+	height: 400px;
+	background-position: center ;
+	/*display: flex;*/
+	background-attachment: fixed;
+	width: 100%;
+}
+.creative h2{
+ font-weight: bold;
+font-size: 40px;
+}
+.creative span{
+	font-weight: normal;
+}
+
+.creative h4 {
+	color: var(--orange);
+	margin-bottom: 20px;
+
+}
+.creative p {
+font-size: 10px;
+color: #888;
+line-height: 1.8;
+}
+.creative .info{
+	padding-top: 50px;
+	width: 50%
+}
+.creative .container{
+	
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-end;
+}
+
+
+@media (max-width: 575px){
+
+.creative .info{
+width: 100%;
+text-align: center;
+}
+
+}
+
+
+@media (max-width: 767px)  {
+.creative{
+	height: auto;
+
+
+}
+.creative .info{
+width: 100%;
+text-align: center;
+padding:15px 0;
+}
+
+}
+
+.social{
+	width: 100%;
+	height: auto;
+	display: flex;
+	box-sizing: border-box;
+}
+.divide{
+	width: 33%;
+	padding: 100px 0 ;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.social .divide:nth-of-type(1){
+background-color: #3b5998;
+}
+.social .divide:nth-of-type(2){
+background-color: #498cbf;
+}
+.social .divide:nth-of-type(3){
+background-color: #cc2127;
+}
+
+.divide i{
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	color: #888;
+	text-align: center;
+	line-height: 40px;
+	margin-right: 10px;
+}
+
+.divide p {
+	flex:2;
+}
+h6{
+	display: inline-block;
+	color: white;
+}
+h6 span{
+	margin-top: 8px;
+font-weight: normal;font-size:15px;
+display: block; }
+
+
+
+@media (max-width: 575px){
+.social{
+	flex-direction: column;
+}
+ .divide{
+
+width: 100%;
+text-align: center;
+}
+
+}
+
+.drop .container{
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 50px;
+}
+.drop h2 {
+	margin-bottom: 30px;
+	font-size: 50px;
+}
+
+.drop span {
+	font-weight: normal;
+}
+form{
+	text-align: center;
+	width: 70%;
+	box-sizing: border-box;
+	height: auto;
+}
+
+form input{
+padding: 20px 0 ;
+}
+
+form input:nth-of-type(1){
+	width: 49%;
+}
+form input:nth-of-type(2){
+	width: 49%;
+}
+form input:nth-of-type(3){
+	width: 100%;
+	margin:10px 0 ;
+}
+
+textarea{
+	display: block;
+	width: 100%;
+	background-color: #ccc;
+	height: 70px;
+	margin-bottom: 10px;
+	padding: 20px 0 ;
+}
+
+form button{
+	width:60%;
+	background-color: white;
+	border: 1px solid #ccc;
+	color: #888;
+	padding: 10px 0 ;
+}
+
+@media (max-width:1200px){
+
+form input:nth-of-type(1){
+	width: 100%;
+	margin-bottom: 10px;
+}
+form input:nth-of-type(2){
+	width: 100%;
+}
+form{
+	width: 80%;
+}
+
+}
+
+
+footer p{
+	text-align: center;
+	color: #888;
+	padding-bottom: 10px;
 
 }
